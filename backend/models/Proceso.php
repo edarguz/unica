@@ -1,8 +1,7 @@
 <?php
 
 namespace backend\models;
-use kartik\widgets\Select2;
-use yii\helpers\ArrayHelper;
+
 use Yii;
 
 /**
@@ -10,15 +9,18 @@ use Yii;
  *
  * @property string $id_proceso
  * @property string $proceso
+ * @property string $id_funcionario
  *
- * @property Motivoausencia[] $motivoausencias
+ * @property Despachada[] $despachadas
+ * @property Funcionario $idFuncionario
+ * @property Recibidas[] $recibidas
  */
 class Proceso extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
-  public static function tableName()
+    public static function tableName()
     {
         return 'proceso';
     }
@@ -44,8 +46,26 @@ class Proceso extends \yii\db\ActiveRecord
         return [
             'id_proceso' => Yii::t('app', 'Id Proceso'),
             'proceso' => Yii::t('app', 'Proceso'),
-            'id_funcionario' => Yii::t('app', 'Funcionario'),
+            'id_funcionario' => Yii::t('app', 'Id Funcionario'),
         ];
+    }
+
+
+    public static  function  get_proceso(){
+          $pr = Proceso::find()->all();
+
+          $pr = ArrayHelper::map($pr, 'id_proceso', 'proceso');
+
+          return $pr;
+
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDespachada()
+    {
+        return $this->hasMany(Despachada::className(), ['id_proceso' => 'id_proceso']);
     }
 
     /**

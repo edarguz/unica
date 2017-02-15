@@ -15,7 +15,8 @@ use yii\bootstrap\Collapse;
 /* @var $searchModel app\models\search\RecibidasSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Recibidas');
+
+//$this->title = Yii::t('app', 'Recibidas');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="recibidas-index">
@@ -67,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ],
     
     'panel' => [
-        'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon glyphicon-folder-open"></i>     Comunicaciones recibidas</h3>',
+        'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-paperclip"></i>     Comunicaciones recibidas</h3>',
         'type'=>'primary',
         // 'before'=> Html::a('<i class="glyphicon glyphicon-plus"></i>', '#', [
         //     'id' => 'activity-index-link',
@@ -106,7 +107,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]
                 ])
             ],
-            'id_recibidas',
+            'consecutivo',
             'entidad',
             'persona',
            
@@ -145,10 +146,10 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id_tipo_doc',
             'archivado_TRD',
             'documento',
-            'firma',
+            
 
             [
-              'attribute' => 'Documento',
+              'attribute' => 'archivo',
               'format' => 'raw',
               'value' => function ($model) {   
                      if ($model->image_web_filename!='')

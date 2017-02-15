@@ -18,8 +18,8 @@ class RecibidasSearch extends Recibidas
     public function rules()
     {
         return [
-            [['id_recibidas', 'id_proceso', 'id_funcionario', 'id_serie', 'id_subserie', 'id_tipo_doc'], 'integer'],
-            [['fecha', 'entidad', 'persona', 'fecha_doc', 'asunto', 'anexos', 'archivado_TRD', 'documento', 'firma', 'archivo'], 'safe'],
+            [['id_recibidas', 'consecutivo', 'id_proceso', 'id_funcionario', 'id_serie', 'id_subserie', 'id_tipo_doc'], 'integer'],
+            [['fecha', 'entidad', 'persona', 'fecha_doc', 'asunto', 'anexos', 'archivado_TRD', 'documento', 'archivo', 'firma'], 'safe'],
         ];
     }
 
@@ -61,6 +61,7 @@ class RecibidasSearch extends Recibidas
         $query->andFilterWhere([
             'id_recibidas' => $this->id_recibidas,
             'fecha' => $this->fecha,
+            'consecutivo' => $this->consecutivo,
             'fecha_doc' => $this->fecha_doc,
             'id_proceso' => $this->id_proceso,
             'id_funcionario' => $this->id_funcionario,
@@ -75,8 +76,8 @@ class RecibidasSearch extends Recibidas
             ->andFilterWhere(['like', 'anexos', $this->anexos])
             ->andFilterWhere(['like', 'archivado_TRD', $this->archivado_TRD])
             ->andFilterWhere(['like', 'documento', $this->documento])
-            ->andFilterWhere(['like', 'firma', $this->firma])
-            ->andFilterWhere(['like', 'archivo', $this->archivo]);
+            ->andFilterWhere(['like', 'archivo', $this->archivo])
+            ->andFilterWhere(['like', 'firma', $this->firma]);
 
         return $dataProvider;
     }

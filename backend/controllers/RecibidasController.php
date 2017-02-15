@@ -8,7 +8,6 @@ use backend\models\search\RecibidasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
 
 /**
  * RecibidasController implements the CRUD actions for Recibidas model.
@@ -66,20 +65,8 @@ class RecibidasController extends Controller
     {
         $model = new Recibidas();
 
-        if ($model->load(Yii::$app->request->post())) {
-
-            $fileName = $model->documento;
-            $model->file = UploadedFile::getInstance($model, 'file');
-            $model->file->saveAs( 'uploads/'.$fileName.'-'.$model->fecha_doc.'.'.$model->file->extension );
-
-            //Guardar el path en la base de datos
-            $model->archivo = 'uploads/'.$fileName.'.'.$model->file->extension;
-            $model->fecha = date('Y-m-d h:m:s');
-            $model->archivado_TRD = $model->id_serie.'.'.$model->id_subserie.'.'.$model->id_tipo_doc;
-            $model->fileName = null;
-            $model->save();
-
-            return $this->redirect(['index', 'id' => $model->id_recibidas]);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id_recibidas]);
         } else {
             return $this->render('create', [
                 'model' => $model,

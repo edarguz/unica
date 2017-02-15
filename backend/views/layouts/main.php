@@ -63,7 +63,7 @@ AppAsset::register($this);
                 $menuItems[]=['label' =>'Unidad de correspondencia',
                                     'items' => [
                                         ['label' => 'Comunicaciones recibidas', 'url' => ['/recibidas']],
-                                        ['label' => 'Comunicaciones despachadas', 'url' => ['/despachadas']],
+                                        ['label' => 'Comunicaciones despachadas', 'url' => ['/despachada']],
                                                               
                                         ],
                 ];

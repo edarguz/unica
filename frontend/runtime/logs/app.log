@@ -1,0 +1,240 @@
+2016-11-16 20:58:18 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: C:/xampp/htdocs/socupacional/assets' in C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 C:\xampp\htdocs\socupacional\frontend\views\layouts\main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\View.php(326): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#13 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#14 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#15 C:\xampp\htdocs\socupacional\frontend\controllers\SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('', Array)
+#21 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\xampp\htdocs\socupacional\index.php(18): yii\base\Application->run()
+#23 {main}
+2016-11-16 20:58:18 [::1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'sh131kclajrgmu165ak8d9nrp6'
+    '_csrf-backend' => '370c6cd664521772a5b405bd38e7a4f34575a3560a43179aad9ab2a697165eada:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"t_MHtQ8ChhM81Fs_INfqfxZT3p6pQaXd\";}'
+    'PHPSESSID' => '4pdmh2avcf1nrkb6uu2ddumro1'
+    '_csrf' => '9f39d8b062bf4010e5bfb0be0a641bbc8a98811c65b21e6a6f28b2024437a560a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sSaj5ZuIVlu3E4YvFTfNcWlmlivyEo1y\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/socupacional/'
+    'SCRIPT_URI' => 'http://localhost/socupacional/'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-backend=sh131kclajrgmu165ak8d9nrp6; _csrf-backend=370c6cd664521772a5b405bd38e7a4f34575a3560a43179aad9ab2a697165eada%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22t_MHtQ8ChhM81Fs_INfqfxZT3p6pQaXd%22%3B%7D; PHPSESSID=4pdmh2avcf1nrkb6uu2ddumro1; _csrf=9f39d8b062bf4010e5bfb0be0a641bbc8a98811c65b21e6a6f28b2024437a560a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sSaj5ZuIVlu3E4YvFTfNcWlmlivyEo1y%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MATLAB\\R2015b\\bin;C:\\Program Files\\cURL\\bin;C:\\Users\\Estudiante\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files (x86)\\SSH Communications Security\\SSH Secure Shell;C:\\Users\\Estudiante\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/socupacional/index.php'
+    'REMOTE_PORT' => '54159'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/socupacional/'
+    'SCRIPT_NAME' => '/socupacional/index.php'
+    'PHP_SELF' => '/socupacional/index.php'
+    'REQUEST_TIME_FLOAT' => 1479326298.434
+    'REQUEST_TIME' => 1479326298
+]
+2016-11-16 20:58:19 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory does not exist: C:/xampp/htdocs/socupacional/assets' 
+
+in C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\AssetManager.php:211
+
+Stack trace:
+#0 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Component.php(130): yii\web\View->getAssetManager()
+#9 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2-debug\panels\AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2-debug\LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#12 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#15 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#16 {main}
+2016-11-16 20:58:18 [::1][-][-][info][application] $_COOKIE = [
+    'advanced-backend' => 'sh131kclajrgmu165ak8d9nrp6'
+    '_csrf-backend' => '370c6cd664521772a5b405bd38e7a4f34575a3560a43179aad9ab2a697165eada:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"t_MHtQ8ChhM81Fs_INfqfxZT3p6pQaXd\";}'
+    'PHPSESSID' => '4pdmh2avcf1nrkb6uu2ddumro1'
+    '_csrf' => '9f39d8b062bf4010e5bfb0be0a641bbc8a98811c65b21e6a6f28b2024437a560a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sSaj5ZuIVlu3E4YvFTfNcWlmlivyEo1y\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/socupacional/'
+    'SCRIPT_URI' => 'http://localhost/socupacional/'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-backend=sh131kclajrgmu165ak8d9nrp6; _csrf-backend=370c6cd664521772a5b405bd38e7a4f34575a3560a43179aad9ab2a697165eada%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22t_MHtQ8ChhM81Fs_INfqfxZT3p6pQaXd%22%3B%7D; PHPSESSID=4pdmh2avcf1nrkb6uu2ddumro1; _csrf=9f39d8b062bf4010e5bfb0be0a641bbc8a98811c65b21e6a6f28b2024437a560a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sSaj5ZuIVlu3E4YvFTfNcWlmlivyEo1y%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MATLAB\\R2015b\\bin;C:\\Program Files\\cURL\\bin;C:\\Users\\Estudiante\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files (x86)\\SSH Communications Security\\SSH Secure Shell;C:\\Users\\Estudiante\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/socupacional/index.php'
+    'REMOTE_PORT' => '54159'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/socupacional/'
+    'SCRIPT_NAME' => '/socupacional/index.php'
+    'PHP_SELF' => '/socupacional/index.php'
+    'REQUEST_TIME_FLOAT' => 1479326298.434
+    'REQUEST_TIME' => 1479326298
+]
+2016-11-17 15:08:33 [::1][1][62j9ls821804pns222vq8uuls5][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\filters\AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Component.php(540): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('signup', Array)
+#8 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('site/signup', Array)
+#9 C:\xampp\htdocs\socupacional\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\socupacional\index.php(18): yii\base\Application->run()
+#11 {main}
+2016-11-17 15:08:32 [::1][1][62j9ls821804pns222vq8uuls5][info][application] $_COOKIE = [
+    'PHPSESSID' => '62j9ls821804pns222vq8uuls5'
+    '_csrf' => 'd074a91dba146c37ec95ccbe6be6ca80238395c539e616f169ff60ac716ae352a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"2f8_baT0giKQAOhSdwUJX6_-27sBW8Ev\";}'
+    'advanced-backend' => '5s256v3mao6lmd2lnpantfgnj7'
+    '_csrf-backend' => 'c45a18015fd723b6ea8307a941d123c4bf6d2c145e6830d32492c31f23becebea:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8x4cpYMfiuFhmMs8Rv2_EticUN9Qn3Lh\";}'
+    '_identity' => '085c42a85f20d2db8002f17accac5956ebd60686bef90558e8663e69524e7707a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"EPs9GaU1fyWGSII4rlSHGuL-ktIzuYec\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'wuqojp'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/socupacional/site/signup'
+    'REDIRECT_SCRIPT_URI' => 'http://localhost/socupacional/site/signup'
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/socupacional/site/signup'
+    'SCRIPT_URI' => 'http://localhost/socupacional/site/signup'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/socupacional/'
+    'HTTP_COOKIE' => 'PHPSESSID=62j9ls821804pns222vq8uuls5; _csrf=d074a91dba146c37ec95ccbe6be6ca80238395c539e616f169ff60ac716ae352a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%222f8_baT0giKQAOhSdwUJX6_-27sBW8Ev%22%3B%7D; advanced-backend=5s256v3mao6lmd2lnpantfgnj7; _csrf-backend=c45a18015fd723b6ea8307a941d123c4bf6d2c145e6830d32492c31f23becebea%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228x4cpYMfiuFhmMs8Rv2_EticUN9Qn3Lh%22%3B%7D; _identity=085c42a85f20d2db8002f17accac5956ebd60686bef90558e8663e69524e7707a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22EPs9GaU1fyWGSII4rlSHGuL-ktIzuYec%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\MATLAB\\R2015b\\bin;C:\\Program Files\\cURL\\bin;C:\\Users\\Estudiante\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files (x86)\\SSH Communications Security\\SSH Secure Shell;C:\\Users\\Estudiante\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/socupacional/index.php'
+    'REMOTE_PORT' => '49744'
+    'REDIRECT_URL' => '/socupacional/site/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/socupacional/site/signup'
+    'SCRIPT_NAME' => '/socupacional/index.php'
+    'PHP_SELF' => '/socupacional/index.php'
+    'REQUEST_TIME_FLOAT' => 1479391712.97
+    'REQUEST_TIME' => 1479391712
+]

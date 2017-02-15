@@ -169,7 +169,7 @@ use kartik\widgets\FileInput;
                     
                     'documento'=>['type'=>Form::INPUT_TEXT, 'options'=>['placeholder'=>'Nombre del documento...']],
 
-                    'file'=>[
+                    'archivo'=>[
                         'type'=>Form::INPUT_WIDGET,
                         'widgetClass'=>'\kartik\widgets\FileInput',
                         'options' => [
